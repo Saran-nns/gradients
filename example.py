@@ -1,6 +1,7 @@
 import torch
 import gradients
 
+
 class MLPModel(torch.nn.Module):
     def __init__(self,D_in, D_out):
         super(MLPModel,self).__init__()
