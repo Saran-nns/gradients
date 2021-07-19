@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gradients/__init__.py
+gradients/gradients.py
+gradients.egg-info/PKG-INFO
+gradients.egg-info/SOURCES.txt
+gradients.egg-info/dependency_links.txt
+gradients.egg-info/not-zip-safe
+gradients.egg-info/top_level.txt

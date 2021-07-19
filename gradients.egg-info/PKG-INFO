@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gradients
+Version: 0.0.1
+Summary: Gradient Checker for Custom built PyTorch Models
+Home-page: https://github.com/Saran-nns/gradients
+Author: Saranraj Nambusubramaniyan
+Author-email: saran_nns@hotmail.com
+License: OSI Approved :: MIT License
+Description: # gradients
+        Gradient check for Custom build PyTorch Models.
+        
+        # TODO
+        Documentation and Use cases
+        
+Keywords: PyTorch,Artificial Neural Networks,Gradients,BackPropagation,Machine Learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
