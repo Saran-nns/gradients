@@ -7,7 +7,6 @@ log = logging.getLogger(__name__)
 torch.set_default_dtype(torch.float64)
 torch.manual_seed(0)
 
-
 class Gradient:
 
     def __init__(self, model, x, y, criterion, eps):
@@ -24,7 +23,7 @@ class Gradient:
     def __new__(cls, model, x, y, criterion, eps)->object:
         gc = super(Gradient, cls).__new__(cls)
         gc.__init__(model, x, y, criterion, eps)
-        return gc.run()
+        return gc.check()
 
     def set_attr(self,param)->None:
         self.__setattr__('param', param)
