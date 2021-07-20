@@ -10,7 +10,7 @@ Medium article is under work
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/gradients.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Gradients is a library to perform gradient checking on your deep learning models. It used centered finite difference approximation to check the difference between analytical gradient and numerical gradients. Currently `Gradients` supports only PyTorch and its models built with custom layers, custom loss functions, activation functions or any neural network function subclassing `AutoGrad`.
+Gradients is a library to perform gradient checking on your deep learning models. It uses centered finite difference approximation to check the difference between analytical and numerical gradients. Currently `Gradients` supports only PyTorch and its models built with custom layers, custom loss functions, activation functions and any neural network function subclassing `AutoGrad`.
 
 Optimizing deep learning models is a two step process:
     1. Compute gradients with respect to parameters
