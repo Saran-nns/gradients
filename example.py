@@ -140,11 +140,9 @@ class MyModel(torch.nn.Module):
         super(MyModel,self).__init__()
         # Create random Tensors for weights.
         self.w1 = torch.nn.Parameter(torch.randn(D_in, D_out), requires_grad=True)
-        # self.relu = torch.nn.ReLU()
-        self.sig = torch.nn.Sigmoid()
     def forward(self,x):
         # Forward pass: compute predicted y using operations; we compute
         # ReLU using our custom autograd operation.
-        y_pred = self.sig(x.mm(self.w1))
+        y_pred = mysigmoid(x.mm(self.w1))
         return y_pred
 
