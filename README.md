@@ -14,9 +14,9 @@ Gradients provide a unit test function to perform gradient checking on your deep
 
 Optimizing deep learning models is a two step process:
 
-    1. Compute gradients with respect to parameters
+1. Compute gradients with respect to parameters
 
-    2. Update the parameters given the gradients
+2. Update the parameters given the gradients
     
 In PyTorch, step 1 is done by the type-based automatic differentiation system `torch.nn.autograd` and 2 by the package implementing optimization algorithms `torch.optim`. Using  them, we can develop fully customized deep learning models with `torch.nn.Module` as follows;
 
