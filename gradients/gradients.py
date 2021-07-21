@@ -89,7 +89,7 @@ class Gradient:
         numgrad = (numgrad_plus-numgrad_minus)/(2.*self.eps)
         diff = torch.norm(anagrad - numgrad)/(torch.norm(anagrad)+torch.norm(numgrad))
         if diff > 1e-7:
-            print(f"Parameter {self.param} has Relative difference {diff}: Check Failed")
+            print(f"Parameter {self.param} Relative difference {diff} Check Failed")
 
     def check(self):
         # Analytical gradient
