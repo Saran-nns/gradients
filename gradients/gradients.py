@@ -102,7 +102,7 @@ class Gradient:
         for self.param, self.theta in self.model.named_parameters():
             if self.theta.requires_grad:
                 self.set_attr(self.param)
-                ana_grad = self.ana_grad()
+                ana_grad = self.anagrad()
                 grad_plus = self.forward(model, self.param, self.eps)
                 grad_minus = self.forward(model, self.param, -self.eps)
                 self.check_(ana_grad,grad_plus,grad_minus)
