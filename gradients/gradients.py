@@ -53,12 +53,10 @@ class Gradient:
 
     def J(self, model, param, eps):
         sd = model.state_dict()
-        # Flatten the param
         w = sd[param].data.flatten()
         temp = w.clone()
         j = torch.zeros(w.size())
         for i in range(len(w)):
-            # Add eps to the i'th parameter
             w[i]+=eps
             sd[param].data = w.reshape(sd[param].data.size())
             model.load_state_dict(sd)
@@ -68,7 +66,6 @@ class Gradient:
 
     def anagrad(self):
 
-        # Custom parameters
         try:
             grad = getattr(self.model,self.param).grad
         except Exception as _:
@@ -89,10 +86,10 @@ class Gradient:
         return grad
 
     def check_(self, anagrad, numgrad_plus, numgrad_minus):
-        # Numerical gradient
         numgrad = (numgrad_plus-numgrad_minus)/(2.*self.eps)
         diff = torch.norm(anagrad - numgrad)/(torch.norm(anagrad)+torch.norm(numgrad))
-        print(f"Parameter: {self.param} | Relative difference: {diff} | Pass? - {diff<=1e-7}")
+        cond = 'Pass' if diff <= 1e-7 else 'Fail'
+        print(f"Parameter: {self.param} | Relative difference: {diff} | {cond}")
         return None
 
     def check(self):
