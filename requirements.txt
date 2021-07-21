@@ -1,5 +1,5 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.2.0+cpu
+torch==1.8.0+cpu
 certifi==2018.11.29
 cycler==0.10.0
 kiwisolver==1.0.1
