@@ -11,10 +11,10 @@ criterion = torch.nn.MSELoss(reduction='mean')
 mycriterion = MSELoss.apply
 class TestGradient(unittest.TestCase):
     def testGradient(self):
-        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8).check())
-        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8).check())
-        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8).check())
-        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8).check())
+        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8))
+        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8))
+        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8))
+        self.assertRaises(Exception, Gradient(model,x,y,criterion,eps=1e-8))
 
 if __name__ == "__main__":
     unittest.main()
