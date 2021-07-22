@@ -67,7 +67,7 @@ class MySigmoid(torch.autograd.Function):
         to stash information for backward computation. You can cache arbitrary
         objects for use in the backward pass using the ctx.save_for_backward method.
         """
-        output = ctx.save_for_backward(output)
+        output = 1/(1+torch.exp(-input))
         ctx.save_for_backward(output)
         return output
 
@@ -79,7 +79,7 @@ class MySigmoid(torch.autograd.Function):
         with respect to the input.
         """
         input, = ctx.saved_tensors
-        return input*(1-input)*grad_output
+        return grad_output*input*(1-input)
 
 # To apply our Function, we use Function.apply method. We alias this as 'relu'.
 mysigmoid = MySigmoid.apply

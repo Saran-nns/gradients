@@ -17,7 +17,7 @@ Optimizing deep learning models is a two step process:
 1. Compute gradients with respect to parameters
 
 2. Update the parameters given the gradients
-    
+
 In PyTorch, step 1 is done by the type-based automatic differentiation system `torch.nn.autograd` and 2 by the package implementing optimization algorithms `torch.optim`. Using  them, we can develop fully customized deep learning models with `torch.nn.Module` and test them using `Gradients` as follows;
 
 ### Activation function with backward
@@ -27,14 +27,14 @@ class MySigmoid(torch.autograd.Function):
 
     @staticmethod
     def forward(ctx, input):
-        output = ctx.save_for_backward(output)
+        output = 1/(1+torch.exp(-input))
         ctx.save_for_backward(output)
         return output
 
     @staticmethod
     def backward(ctx, grad_output):
         input, = ctx.saved_tensors
-        return input*(1-input)*grad_output
+        return grad_output*input*(1-input)
 ```
 
 ### Loss function with autograd backward
