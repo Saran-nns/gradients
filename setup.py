@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name="gradients",
-    version="0.0.1",
+    version="0.0.2",
     author="Saranraj Nambusubramaniyan",
     author_email="saran_nns@hotmail.com",
     description="Gradient Checker for Custom built PyTorch Models",
