@@ -18,7 +18,7 @@ Optimizing deep learning models is a two step process:
 
 2. Update the parameters given the gradients
     
-In PyTorch, step 1 is done by the type-based automatic differentiation system `torch.nn.autograd` and 2 by the package implementing optimization algorithms `torch.optim`. Using  them, we can develop fully customized deep learning models with `torch.nn.Module` as follows;
+In PyTorch, step 1 is done by the type-based automatic differentiation system `torch.nn.autograd` and 2 by the package implementing optimization algorithms `torch.optim`. Using  them, we can develop fully customized deep learning models with `torch.nn.Module` and test them using `Gradients` as follows;
 
 ### Activation function with backward
 
