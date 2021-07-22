@@ -68,7 +68,7 @@ class MyModel(torch.nn.Module):
 ### Check your implementation using Gradient
 
 ```python
-
+ 
 N, D_in, D_out = 10, 4, 3
 
 # Create random Tensors to hold inputs and outputs
