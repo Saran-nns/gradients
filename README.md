@@ -60,39 +60,29 @@ class MyModel(torch.nn.Module):
     def __init__(self,D_in, D_out):
         super(MyModel,self).__init__()
         self.w1 = torch.nn.Parameter(torch.randn(D_in, D_out), requires_grad=True)
+        self.sigmoid = MySigmoid.apply
     def forward(self,x):
-        y_pred = mysigmoid(x.mm(self.w1))
+        y_pred = self.sigmoid(x.mm(self.w1))
         return y_pred
 ```
-### Optimizer
+### Check your implementation using Gradient
+
 ```python
-class SGD(torch.optim.Optimizer):
-    """Reference: http://pytorch.org/docs/master/_modules/torch/optim/sgd.html#SGD"""
-    def __init__(self, params, lr=1e-3):
-        defaults = dict(lr=lr)
-        super(SGD,self).__init__(params,defaults)
 
-    def __setstate__(self, state):
-        super(SGD, self).__setstate__(state)
+N, D_in, D_out = 10, 4, 3
 
-    def step(self, closure=None):
+# Create random Tensors to hold inputs and outputs
+x = torch.randn(N, D_in)
+y = torch.randn(N, D_out)
 
-        loss = None
-        if closure is not None:
-            loss = closure()
+# Construct our model by instantiating the class defined above
+mymodel = MyModel(D_in, D_out)
+criterion = MSELoss.apply
 
-        for group in self.param_groups:
+# Test custom build model
+Gradient(mymodel,x,y,criterion,eps=1e-8)
 
-            for p in group['params']:
-                if p.grad is None:
-                    continue
-                d_p = p.grad.data
-                p.data.add_(-group['lr'], d_p)
-        return loss
 ```
-TODO
-### Instantiate, gradcheck and train the model
-
 
 
 
