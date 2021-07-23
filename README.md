@@ -10,7 +10,11 @@ Medium article is under work
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/gradients.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Gradients provide a unit test function to perform gradient checking on your deep learning models. It uses centered finite difference approximation to check the difference between analytical and numerical gradients and report if the check fails on any parameters of your model. Currently the library supports only PyTorch models built with custom layers, custom loss functions, activation functions and any neural network function subclassing `AutoGrad`.
+Gradients provide a unit test function to perform gradient checking on your deep learning models. It uses centered finite difference approximation method to check the difference between analytical and numerical gradients and report if the check fails on any parameters of your model. Currently the library supports only PyTorch models built with custom layers, custom loss functions, activation functions and any neural network function subclassing `AutoGrad`.
+
+### Installation
+
+``` pip install gradients```
 
 Optimizing deep learning models is a two step process:
 
@@ -68,7 +72,9 @@ class MyModel(torch.nn.Module):
 ### Check your implementation using Gradient
 
 ```python
- 
+import torch
+from gradients import Gradient
+
 N, D_in, D_out = 10, 4, 3
 
 # Create random Tensors to hold inputs and outputs
