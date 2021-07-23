@@ -42,7 +42,7 @@ class MySigmoid(torch.autograd.Function):
         return grad_output*input*(1-input)
 ```
 
-### Loss function with autograd backward
+### Loss function with backward
 
 ```python
 class MSELoss(torch.autograd.Function):
