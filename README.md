@@ -82,7 +82,7 @@ N, D_in, D_out = 10, 4, 3
 x = torch.randn(N, D_in)
 y = torch.randn(N, D_out)
 
-# Construct our model by instantiating the class defined above
+# Construct model by instantiating the class defined above
 mymodel = MyModel(D_in, D_out)
 criterion = MSELoss.apply
 
