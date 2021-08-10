@@ -8,6 +8,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/gradients.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![DOI](https://zenodo.org/badge/386222818.svg)](https://zenodo.org/badge/latestdoi/386222818)
 
 Gradients provide a unit test function to perform gradient checking on your deep learning models. It uses centered finite difference approximation method to check the difference between analytical and numerical gradients and report if the check fails on any parameters of your model. Currently the library supports only PyTorch models built with custom layers, custom loss functions, activation functions and any neural network function subclassing `AutoGrad`.
 
