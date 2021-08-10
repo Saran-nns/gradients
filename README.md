@@ -1,7 +1,6 @@
 <a href="url"><img src="https://raw.githubusercontent.com/Saran-nns/gradients/master/imgs/LOGO.jpg"></a>
 ## Build your deep learning models with confidence
 
-Medium article is under work
 
 [![Build Status](https://travis-ci.com/Saran-nns/gradients.svg?branch=main)](https://travis-ci.com/Saran-nns/gradients)
 [![codecov](https://codecov.io/gh/Saran-nns/gradients/branch/main/graph/badge.svg)](https://codecov.io/gh/Saran-nns/gradients)
