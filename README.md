@@ -92,7 +92,7 @@ Gradient(mymodel,x,y,criterion,eps=1e-8)
 ```
 
 
-Citing `Gradients`
+## Citing `Gradients`
 
 ```python
 @software{nambusubramaniyan_saranraj_2021_5176243,
