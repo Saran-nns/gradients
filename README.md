@@ -90,18 +90,3 @@ criterion = MSELoss.apply
 Gradient(mymodel,x,y,criterion,eps=1e-8)
 
 ```
-
-
-## Citing `Gradients`
-
-```python
-@software{nambusubramaniyan_saranraj_2021_5176243,
-  author       = {Nambusubramaniyan, Saranraj},
-  title        = {gradients},
-  month        = aug,
-  year         = 2021,
-  publisher    = {Zenodo},
-  version      = {1.0.0},
-  doi          = {10.5281/zenodo.5176243},
-  url          = {https://doi.org/10.5281/zenodo.5176243}
-}```
