@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/Saran-nns/gradients/branch/main/graph/badge.svg)](https://codecov.io/gh/Saran-nns/gradients)
 [![PyPI version](https://badge.fury.io/py/gradients.svg)](https://badge.fury.io/py/gradients)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/gradients.svg)
+[![Downloads](https://pepy.tech/badge/gradients)](https://pepy.tech/project/gradients)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![DOI](https://zenodo.org/badge/386222818.svg)](https://zenodo.org/badge/latestdoi/386222818)
 
