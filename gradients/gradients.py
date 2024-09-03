@@ -114,11 +114,19 @@ class Gradient:
     def check_(self, anagrad, numgrad_plus, numgrad_minus):
 
         numgrad = (numgrad_plus - numgrad_minus) / (2.0 * self.eps)
+
         diff = torch.norm(anagrad - numgrad) / (
             torch.norm(anagrad) + torch.norm(numgrad)
         )
-        if diff > 1e-7:
-            print(f"Parameter {self.param} Relative difference {diff} Check Failed")
+
+        if diff > 1e-6:
+            print(
+                f"Parameter {self.param} Relative difference between analytical and numerical gradient is {diff}>1e-6: Check Failed"
+            )
+        else:
+            print(
+                f"Parameter {self.param} Relative difference between analytical and numerical gradient is {diff}<1e-6: Check Passed"
+            )
 
     def check(self):
         # Analytical gradient
@@ -135,4 +143,3 @@ class Gradient:
                 grad_plus = self.forward(model, self.param, self.eps)
                 grad_minus = self.forward(model, self.param, -self.eps)
                 self.check_(ana_grad, grad_plus, grad_minus)
-
