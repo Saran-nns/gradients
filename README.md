@@ -2,7 +2,7 @@
 ## Build your deep learning models with confidence
 
 
-[![Build Status](https://travis-ci.com/Saran-nns/gradients.svg?branch=main)](https://travis-ci.com/Saran-nns/gradients)
+[![Build Status](https://github.com/Saran-nns/gradients/actions/workflows/build.yml/badge.svg)](https://github.com/Saran-nns/gradients/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/Saran-nns/gradients/branch/main/graph/badge.svg)](https://codecov.io/gh/Saran-nns/gradients)
 [![PyPI version](https://badge.fury.io/py/gradients.svg)](https://badge.fury.io/py/gradients)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
