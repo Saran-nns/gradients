@@ -4,24 +4,17 @@
 __pycache__/
 *.py[cod]
 
-### VisualStudioCode ###
+# VisualStudioCode
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
 *.code-workspace
 
-### VisualStudioCode Patch ###
+# VisualStudioCode Patch
 # Ignore all local history of files
 .history
 .ionide
 
-### Github ###
-.github/*
-
-### PyCharm ###
-.DS_store/*
-
-### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
